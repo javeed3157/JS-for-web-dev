@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow funcs</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow funtions codesnippet
+    </div>
+    <script>
+        // function greet(){
+        //     console.log("Hello guys");
+        // }
+        
+        // Arrow Function
+        // let greet = ()=>{
+        //     console.log("Hello guys");
+        // }
+        // let greet = ()=>console.log("Hello guys");
+        // greet();
+
+        // setTimeout(() => {
+        //     console.log("This setTimeout")
+        // }, 5000);
+        
+        // let sum=(a,b)=>{
+        //     return a+b;
+        // } //No need of writing return while using arrow func
+
+        // let sum = (a, b) => a + b;
+        // console.log(sum(2,3));
+
+        // let half=a=>a/2; //If a single arg no need of brackets
+        // console.log(half(1));
+
+        let obj1={
+            greeting:"Good Morning ",
+            name:['Hello','Bye','Seeyou','tata'],
+            speak(){
+                this.name.forEach((i)=>{
+                    console.log(this.greeting+i);
+                });
+            },
+            sings(){
+                this.name.forEach(function func(j){
+                    console.log(this.greeting+j);
+                });
+            }
+        }
+        //this used in Arrow func is called lexical this
+        obj1.speak();//Here arrow function doent have its own this it takes it parents this
+        obj1.sings();//Here function have its own this
+    </script>
+</body>
+</html>
