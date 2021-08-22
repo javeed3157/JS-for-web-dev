@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events</title>
+        <style>
+            #btn{
+                border:2px solid black;
+                background-color:red;
+                color: white;
+                padding: 10px 14px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>This is Heading</h1>
+            <p id="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates voluptatem ipsa commodi corrupti voluptatum sequi
+                voluptas consequuntur quam hic incidunt repudiandae
+                exercitationem alias rem rerum ipsam cupiditate, error quaerat
+                fuga maiores debitis facere quo. Tempore nostrum maxime
+                consequatur dicta vitae illo! Aut praesentium quam voluptates
+                commodi iusto nisi temporibus ipsum quos cum rerum aperiam
+                eveniet necessitatibus eaque, fuga consequatur debitis error ea
+                repudiandae reprehenderit nemo asperiores! Ea, laboriosam atque,
+                dignissimos minima et sequi alias pariatur fuga quia vitae ipsum
+                corporis nemo eaque voluptates. Nostrum excepturi temporibus
+                perferendis harum nulla molestiae omnis quos tempora corporis in
+                necessitatibus, laudantium, maxime eligendi molestias amet magni
+                nihil modi commodi hic aliquid esse suscipit. Error vero ex
+                accusantium, vitae quod aliquam omnis delectus culpa ratione
+                facere. Tenetur nulla dolores dolorem commodi illum doloribus.
+                Temporibus tempore et necessitatibus, commodi error repellat
+                recusandae asperiores ut maxime quaerat beatae voluptatem
+                voluptatibus quas officiis quia reprehenderit ratione laboriosam
+                illum molestias distinctio culpa ab. Optio beatae laudantium,
+                esse nostrum fugit ad hic quam magni, facere quasi facilis
+                voluptate assumenda ab? Aspernatur officiis ratione nemo vero
+                doloremque cumque odio commodi enim, porro eaque aliquid
+                similique saepe atque incidunt quis impedit sit distinctio
+                veniam inventore est, sapiente necessitatibus ad nostrum. Veniam
+                quas explicabo quis deleniti, eaque soluta tenetur temporibus,
+                aut earum a perferendis eos odio porro dicta voluptatum maiores
+                impedit minima nam? Eligendi cupiditate, unde nulla quasi
+                quisquam maxime et obcaecati laudantium eaque debitis corporis
+                dicta placeat consectetur animi fuga. Exercitationem quos,
+                facilis numquam a odio rem vel omnis autem suscipit dolorum.
+            </p>
+        </div>
+        <button id="btn" onclick="togglehide()">Show/hide</button>
+        <script>
+            let para=document.getElementById('para');
+            para.addEventListener('mouseover',function run(){
+                alert("Mouse inside");
+            });
+
+            para.addEventListener('mouseout',function run(){
+                alert("Mouse outside");
+            })
+            function togglehide(){
+                let btn=document.getElementById("btn");
+                let para=document.getElementById("para");
+                //In modern browsers we need not define the above para as it directly points our para 
+                //But it is good practice to define para using getElementById
+                if(para.style.display!='none'){
+                    para.style.display='none';
+                }
+                else{
+                    para.style.display='block';
+                }
+                
+            }
+        </script>
+    </body>
+</html>
