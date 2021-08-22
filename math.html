@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is for maths</h1> 
+    </div>
+    <script>
+        let m=Math;//Math obj
+        console.log(m);
+
+        console.log("The value of Math.E is ",m.E)
+        console.log("The value of Math.PI is ",m.PI)
+        console.log("The value of Math.LN2 is ",m.LN2)
+        console.log("The value of Math.SQRT1_2 is ",m.SQRT1_2)
+        console.log("The value of Math.LOG2E is ",m.LOG2E)
+    
+        let a=23.23;
+        let b=100;
+        console.log("a,b are ",a,b);
+        console.log("Rounded values of a,b are ",Math.round(a),m.round(b));
+        console.log("3^2 is ",m.pow(3,2));
+        console.log("Sqrt of 4",m.sqrt(4));
+        console.log("floor of 6.6",m.floor(6.6));
+        console.log("ceil of 6.6",m.ceil(6.6));
+        console.log("abs of 6.6",m.ceil(-6.6));
+        console.log("sin(90) is ",m.sin(m.PI/2));
+        console.log("cos(90) is ",m.cos(m.PI/2));
+        console.log("tan(90) is ",m.tan(m.PI/2));
+        console.log("Min of 1,2 is ",m.min(1,2));
+        console.log("Max of 1,2 is ",m.max(1,2));
+        console.log("log10 10 is ",m.log10(10));
+        //Random number generation
+        let r=Math.random();
+        console.log("Random number r is ",r);
+        let a1=1;
+        let b1=100;
+        let r1=a1+(b1-a1)*Math.random();
+        console.log(r1);
+
+    </script>
+</body>
+</html>
