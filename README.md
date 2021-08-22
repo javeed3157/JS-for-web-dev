@@ -1,0 +1,1 @@
+# This Repo contains some basics of JavaScript essential for Web development
