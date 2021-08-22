@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates n Time</title>
+    <style>
+        .container{
+            text-align: center;
+            background-color: antiquewhite;
+            border: 2px solid sandybrown;
+            padding: 20px 20px;
+            margin: 10px;
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Current time is <span id="time"></span>
+    </div>
+    <script>
+        let now=new Date();
+        console.log(now);
+
+        let ago=new Date(0);
+        console.log(ago);
+
+        // let d1=new Date("2021-10-10");
+        // console.log(d1);
+
+        // let nd1=new Date(year,month,date,hours,minutes,seconds)
+        // let nd1=new Date(3333,5,7,8,9,2);
+        // console.log(nd1);
+
+        let dt=now.getDate();
+        console.log("The date is "+dt);
+        let yr=now.getFullYear();
+        console.log("The year is "+yr);
+        let time=now.getHours();
+        console.log("The Hours are "+time);
+        now.setDate(23);
+        now.setMinutes(59);
+        console.log(now);
+        setInterval(updatetime, 1000);
+        function updatetime(){
+            let time=new Date();
+            document.getElementById('time').innerHTML=time;
+        }
+    </script>
+</body>
+</html>
